@@ -6,12 +6,19 @@
       - protobuf
       - meld
 
+- name: Install ngrok
+  aur:
+    use: yay
+    name:
+      - ngrok
+
 - name: Install service test tools
   aur:
     use: yay
     name:
       - postman
       - grpcurl
+      - ngrok
       #- bloomrpc-bin
 
 - name: Install db tools
@@ -29,3 +36,19 @@
     name:
       - datagrip
 
+
+- name: Install editors
+  become: yes
+  pacman:
+    name:
+      - bluefish
+      - geany
+      - emacs
+      #- haroopad
+
+- name: Install sublime text 4
+  aur:
+    use: yay
+    name:
+      - sublime-text-4
+  
