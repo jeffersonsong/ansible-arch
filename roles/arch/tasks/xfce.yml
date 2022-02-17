@@ -1,13 +1,18 @@
 ---
-- name: Install xorg
+- name: Install minimal xorg
   become: yes
   pacman:
     name:
       - xorg-server
+
+- name: Install graphic drivers
+  become: yes
+  pacman:
+    name:
       - xf86-video-vesa
       - xf86-video-amdgpu
 
-- name: Install xfce4
+- name: Install minimal xfce4
   become: yes
   pacman:
     name:
@@ -15,17 +20,28 @@
       - xfce4-panel
       - xfce4-session
       - xfdesktop
+      - thunar
+
+- name: Install selective xfce4
+  become: yes
+  pacman:
+    name:
       - xfce4-appfinder
-      - xfce4-artwork
       - xfce4-power-manager
-      - xfce4-settings
       - xfce4-terminal
+      - xfce4-settings
+
+- name: Install selective xfce4 goodies
+  become: yes
+  pacman:
+    name:
+      - mousepad
+      - xfce4-artwork
       - xfce4-datetime-plugin
       - xfce4-netload-plugin
-      - xfce4-pulseaudio-plugin 
       - xfce4-screensaver
       - xfce4-weather-plugin
-      - xfce4-whiskermenu-plugin 
+      - xfce4-whiskermenu-plugin
 
 - name: Install lxdm
   become: yes
@@ -38,18 +54,6 @@
   systemd:
     name: lxdm.service
     enabled: yes      
-
-- name: Install file manager
-  become: yes
-  pacman:
-    name:
-      - thunar
-
-- name: Install mousepad
-  become: yes
-  pacman:
-    name:
-      - mousepad
 
 - name: Install plank
   become: yes
