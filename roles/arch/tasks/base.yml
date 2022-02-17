@@ -1,0 +1,20 @@
+---
+- name: Install base-devel
+  become: yes
+  pacman:
+    name:
+      - fakeroot
+      - gcc
+      - make
+
+- name: Install CLI
+  become: yes
+  pacman:
+    name:
+      - vim
+
+- name: Install terminal
+  become: yes
+  pacman:
+    name:
+      - terminator

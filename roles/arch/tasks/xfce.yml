@@ -46,3 +46,9 @@
   pacman:
     name:
       - mousepad
+
+- name: Install plank
+  become: yes
+  pacman:
+    name:
+      - plank

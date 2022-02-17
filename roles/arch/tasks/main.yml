@@ -4,3 +4,9 @@
 
 - name: Install xfce
   import_tasks: xfce.yml
+
+- name: Install base
+  import_tasks: base.yml
+
+- name: Install zsh
+  import_tasks: zsh.yml

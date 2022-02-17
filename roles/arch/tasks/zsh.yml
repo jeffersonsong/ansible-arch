@@ -1,0 +1,8 @@
+---
+- name: Install zsh
+  become: yes
+  pacman:
+    name:
+      - zsh
+      - zsh-completions
+      - zsh-syntax-highlighting
