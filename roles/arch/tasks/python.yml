@@ -1,0 +1,10 @@
+---
+- name: Install miniconda3
+  aur:
+    use: yay
+    name: miniconda3
+
+- name: Install pycharm-community-edition
+  aur:
+    use: yay
+    name: pycharm-community-edition

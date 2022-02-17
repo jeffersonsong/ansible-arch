@@ -37,3 +37,6 @@
 
 - name: Install java dev
   import_tasks: java.yml
+
+- name: Install python dev
+  import_tasks: python.yml
