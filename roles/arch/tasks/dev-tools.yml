@@ -27,7 +27,7 @@
     name:
       - dbeaver
       - mysql-workbench
-      - tableplus
+      #- tableplus not working
       - squirrel-sql
       - redis-desktop-manager
 
