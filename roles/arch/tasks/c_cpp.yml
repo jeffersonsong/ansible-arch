@@ -14,4 +14,7 @@
 - name: Install clang
   become: yes
   pacman: name=clang state=present
-  
+
+- name: Install codeblocks
+  become: yes
+  pacman: name=codeblocks state=present  

@@ -40,3 +40,6 @@
 
 - name: Install dev tools
   import_tasks: dev-tools.yml
+
+- name: Install productivity tools
+  import_tasks: productivity.yml

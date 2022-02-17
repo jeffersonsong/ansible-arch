@@ -18,9 +18,19 @@
       - jq
       - ripgrep
       - httpie
-      - tar
+
+- name: Install archival tools
+  become: yes
+  pacman:
+    name:
+      - p7zip
+      - unrar
       - unzip
+      - xz
       - zip
+      - bzip2
+      - gzip
+      - tar
 
 - name: Install monitoring tools
   become: yes

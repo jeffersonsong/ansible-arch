@@ -1,0 +1,21 @@
+---
+- name: Install productivity tools
+  become: yes
+  pacman:
+    name:
+      - shotwell
+      - peek
+      - flameshot
+      - okular
+      #- pdfshuffler
+      - libreoffice
+
+#- name: Install PDF
+#  flatpak:
+#    name:
+#      - master-pdf-editor
+
+- name: Install ISO burner
+  aur:
+    use: yay
+    name: etcher-bin
