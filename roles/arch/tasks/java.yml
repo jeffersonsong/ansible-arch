@@ -4,6 +4,7 @@
   pacman:
     name:
       - jdk11-openjdk
+      - openjdk11-src
       - maven
       - gradle
       - intellij-idea-community-edition

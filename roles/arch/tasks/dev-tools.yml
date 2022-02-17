@@ -1,0 +1,21 @@
+---
+- name: Install protobuf
+  become: yes
+  pacman:
+    name: 
+      - protobuf
+
+- name: Install service test tools
+  aur:
+    use: yay
+    name:
+      - postman
+      - grpcurl
+      - bloomrpc-bin
+
+- name: Install db tools
+  aur: 
+    use: yay
+    name:
+      - dbeaver
+      - mysql-workbench
