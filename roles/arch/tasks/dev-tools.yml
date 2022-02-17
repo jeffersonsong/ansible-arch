@@ -4,6 +4,7 @@
   pacman:
     name: 
       - protobuf
+      - meld
 
 - name: Install service test tools
   aur:
@@ -19,3 +20,12 @@
     name:
       - dbeaver
       - mysql-workbench
+      - tableplus
+      - squirrel-sql
+      - redis-desktop-manager
+
+- name: Install DataGrip
+  flatpak:
+    name:
+      - datagrip
+
