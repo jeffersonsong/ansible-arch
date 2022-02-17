@@ -41,5 +41,8 @@
 - name: Install dev tools
   import_tasks: dev-tools.yml
 
+- name: Install docker
+  import_tasks: docker.yml
+
 - name: Install productivity tools
   import_tasks: productivity.yml
