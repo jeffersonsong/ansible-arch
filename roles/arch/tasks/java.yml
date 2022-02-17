@@ -1,0 +1,27 @@
+---
+- name: Install Java Tools
+  become: yes
+  pacman:
+    name:
+      - jdk11-openjdk
+      - maven
+      - gradle
+      - intellij-idea-community-edition
+
+- name: Install kotlin
+  become: yes
+  pacman:
+    name:      
+      - kotlin
+
+- name: Install Scala Tools
+  become: yes
+  pacman:
+    name:      
+      - scala
+      - sbt
+  
+- name: Install Android Studio
+  aur:
+    use: yay
+    name: android-studio

@@ -34,3 +34,6 @@
 
 - name: Install c_cpp
   import_tasks: c_cpp.yml
+
+- name: Install java dev
+  import_tasks: java.yml
