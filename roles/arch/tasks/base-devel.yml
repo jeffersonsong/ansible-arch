@@ -6,3 +6,4 @@
       - fakeroot
       - gcc
       - make
+    state: present

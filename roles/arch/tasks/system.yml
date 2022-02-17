@@ -3,7 +3,7 @@
   become: yes
   pacman:
     update_cache: yes
-    upgrade: yes
+    upgrade: yes    
   tags:
     - upgrade
 

@@ -4,6 +4,7 @@
   pacman:
     name:
       - xorg-server
+    state: present
 
 - name: Install graphic drivers
   become: yes
@@ -11,6 +12,7 @@
     name:
       - xf86-video-vesa
       - xf86-video-amdgpu
+    state: present
 
 - name: Install minimal xfce4
   become: yes
@@ -21,6 +23,7 @@
       - xfce4-session
       - xfdesktop
       - thunar
+    state: present
 
 - name: Install selective xfce4
   become: yes
@@ -30,6 +33,7 @@
       - xfce4-power-manager
       - xfce4-terminal
       - xfce4-settings
+    state: present
 
 - name: Install selective xfce4 goodies
   become: yes
@@ -42,6 +46,7 @@
       - xfce4-screensaver
       - xfce4-weather-plugin
       - xfce4-whiskermenu-plugin
+    state: present
 
 - name: Install lxdm
   become: yes
@@ -60,3 +65,4 @@
   pacman:
     name:
       - plank
+    state: present

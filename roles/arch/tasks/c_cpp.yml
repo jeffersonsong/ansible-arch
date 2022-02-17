@@ -1,20 +1,32 @@
 ---
 - name: Install GCC
   become: yes
-  pacman: name=gcc state=present
+  pacman: 
+    name: gcc
+    state: present
 
 - name: Install GNU Debugger
   become: yes
-  pacman: name=gdb state=present
+  pacman: 
+    name: gdb
+    state: present
 
 - name: Install cmake
   become: yes
-  pacman: name=cmake state=present
+  pacman: 
+    name: 
+      - cmake
+      - make
+    state: present
 
 - name: Install clang
   become: yes
-  pacman: name=clang state=present
+  pacman: 
+    name: clang
+    state: present
 
 - name: Install codeblocks
   become: yes
-  pacman: name=codeblocks state=present  
+  pacman: 
+    name: codeblocks
+    state: present

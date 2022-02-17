@@ -9,6 +9,7 @@
       - baobab
       - smartmontools
       - bleachbit
+    state: present
 
 - name: Install timeshift
   aur:

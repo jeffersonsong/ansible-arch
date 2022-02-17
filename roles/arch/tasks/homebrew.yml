@@ -4,6 +4,7 @@
   pacman:
     name:
       - libyaml
+    state: present
 
 - name: Install rvm
   aur:

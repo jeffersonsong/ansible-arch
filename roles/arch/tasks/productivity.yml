@@ -9,6 +9,7 @@
       - okular
       #- pdfshuffler
       - libreoffice
+    state: present
 
 #- name: Install PDF
 #  flatpak:

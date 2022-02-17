@@ -8,12 +8,14 @@
       - maven
       - gradle
       - intellij-idea-community-edition
+    state: present
 
 - name: Install kotlin
   become: yes
   pacman:
     name:      
       - kotlin
+    state: present
 
 - name: Install Scala Tools
   become: yes
@@ -21,6 +23,7 @@
     name:      
       - scala
       - sbt
+    state: present
   
 - name: Install Android Studio
   aur:

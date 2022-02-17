@@ -4,6 +4,7 @@
   pacman:
     name:
       - terminator
+    state: present
 
 - name: Install Hyper
   aur:

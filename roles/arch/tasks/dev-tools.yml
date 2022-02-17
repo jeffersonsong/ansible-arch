@@ -5,6 +5,7 @@
     name: 
       - protobuf
       - meld
+    state: present
 
 - name: Install ngrok
   aur:
@@ -27,7 +28,6 @@
     name:
       - dbeaver
       - mysql-workbench
-      #- tableplus not working
       - squirrel-sql
       - redis-desktop-manager
 
@@ -40,9 +40,10 @@
   become: yes
   pacman:
     name:
-      - bluefish
-      - geany
+      #- bluefish
+      #- geany
       - emacs
+    state: present
 
 - name: Install editors from aur
   aur:
@@ -50,4 +51,4 @@
     name:
       - visual-studio-code-bin
       - sublime-text-4
-      #- haroopad      
+      #- haroopad

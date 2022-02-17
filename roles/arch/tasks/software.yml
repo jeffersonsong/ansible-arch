@@ -3,6 +3,7 @@
   become: yes
   pacman:
     name: flatpak
+    state: present    
 
 #- name: Install snap
 #  import_tasks: snap.yml

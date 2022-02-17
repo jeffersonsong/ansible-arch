@@ -10,6 +10,7 @@
       - jq
       - ripgrep
       - httpie
+    state: present
 
 - name: Install archival tools
   become: yes
@@ -23,6 +24,7 @@
       - bzip2
       - gzip
       - tar
+    state: present
 
 - name: Install monitoring tools
   become: yes
@@ -34,6 +36,7 @@
       - lm_sensors
       - psensor
       - sysbench
+    state: present
 
 - name: Install stacer
   aur:
@@ -50,3 +53,4 @@
   pacman:
     name:
       - vagrant
+    state: present

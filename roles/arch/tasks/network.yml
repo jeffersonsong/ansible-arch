@@ -4,12 +4,14 @@
   pacman:
     name:
       - networkmanager
+    state: present
 
 - name: Install openssh
   become: yes
   pacman:
     name:
       - openssh
+    state: present
 
 - name: Install utilities
   become: yes
@@ -18,9 +20,11 @@
       - wget
       - curl
       - git
+    state: present
 
 - name: Install firewall
   become: yes
   pacman:
     name:
       - gufw
+    state: present

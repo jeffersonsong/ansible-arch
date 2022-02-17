@@ -6,6 +6,7 @@
     name:
       - docker
       - docker-compose
+    state: present
 
 #- name: Add the user to docker group
 #  user: name={{ user.name }} groups=docker append=yes
