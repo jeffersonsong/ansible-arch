@@ -18,6 +18,8 @@
       - jq
       - ripgrep
       - httpie
+      - tar
+      - unzip
 
 - name: Install terminal
   become: yes

@@ -1,0 +1,25 @@
+---
+- name: Refresh pacman mirrors
+  become: yes
+  pacman:
+    update_cache: yes
+    upgrade: yes
+  tags:
+    - upgrade
+
+- name: Ensure locale en_US.UTF-8 locale is present
+  become: yes
+  locale_gen:
+    name: en_US.UTF-8
+    state: present
+
+- name: Set local en_US.UTF-8 locale systemwide
+  become: yes
+  copy:
+    dest: "/etc/locale.conf"
+    content: "LANG=en_US.UTF-8"
+
+- name: Set timezone to '{{ timezone }}'
+  become: yes
+  timezone:
+    name: '{{ timezone }}'

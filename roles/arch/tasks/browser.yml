@@ -1,0 +1,6 @@
+---
+- name: Install Firefox
+  become: yes
+  pacman: name=firefox state=present
+  tags:
+    - firefox

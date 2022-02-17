@@ -6,3 +6,8 @@
       - zsh
       - zsh-completions
       - zsh-syntax-highlighting
+
+#- name: change user shell to zsh
+#  become: yes
+#  become_user: root
+#  command: chsh -s /bin/zsh "{{ username }}"
