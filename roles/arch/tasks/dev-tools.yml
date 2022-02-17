@@ -11,7 +11,7 @@
     name:
       - postman
       - grpcurl
-      - bloomrpc-bin
+      #- bloomrpc-bin
 
 - name: Install db tools
   aur: 
