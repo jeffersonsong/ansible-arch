@@ -44,5 +44,8 @@
 - name: Install docker
   import_tasks: docker.yml
 
+- name: Install k8s
+  import_tasks: k8s.yml  
+
 - name: Install productivity tools
   import_tasks: productivity.yml

@@ -1,0 +1,49 @@
+- name: Install kubectl
+  become: yes
+  get_url:
+    url: https://dl.k8s.io/release/v1.23.3/bin/linux/amd64/kubectl
+    dest: /usr/local/bin/kubectl
+    mode: 0755
+    owner: root
+    group: root
+
+- name: Install Kompose
+  become: yes
+  get_url:
+    url: https://github.com/kubernetes/kompose/releases/download/v1.22.0/kompose-linux-amd64
+    dest: /usr/local/bin/kompose
+    mode: 0755
+ 
+- name: Install k3d
+  become: yes
+  ansible.builtin.shell: |
+    wget -q -O - https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash
+
+- name: Install minikube
+  become: yes
+  get_url:
+    url: https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+    dest: /usr/local/bin/minikube
+    mode: 0755
+
+#- name: Install Lens IDE
+#  import_tasks: lens.yml
+
+- name: Install Skaffold
+  become: yes
+  get_url:
+    url: https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64
+    dest: /usr/local/bin/skaffold
+    mode: 0755
+
+- name: Install helm
+  become: yes
+  ansible.builtin.shell: |
+    curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
+- name: Install telepresence
+  become: yes
+  get_url:
+    url: https://app.getambassador.io/download/tel2/linux/amd64/latest/telepresence
+    dest: /usr/local/bin/telepresence
+    mode: 0755
