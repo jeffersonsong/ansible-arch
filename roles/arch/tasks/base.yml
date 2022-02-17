@@ -7,6 +7,11 @@
       - gcc
       - make
 
+- name: Install yay
+  aur:
+    name:
+      - yay
+
 - name: Install CLI
   become: yes
   pacman:
@@ -20,12 +25,6 @@
       - httpie
       - tar
       - unzip
-
-- name: Install terminal
-  become: yes
-  pacman:
-    name:
-      - terminator
 
 - name: Install monitoring tools
   become: yes

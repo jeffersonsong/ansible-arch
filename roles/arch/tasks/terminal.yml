@@ -1,0 +1,11 @@
+---
+- name: Install terminal
+  become: yes
+  pacman:
+    name:
+      - terminator
+
+- name: Install Hyper
+  aur:
+    use: yay
+    name: hyper-bin
