@@ -10,3 +10,7 @@
 
 - name: Install zsh
   import_tasks: zsh.yml
+
+- name: Install disk utilities
+  import_tasks: disk.yml
+

@@ -1,0 +1,11 @@
+---
+- name: Install disk utilities
+  become: yes
+  pacman:
+    name:      
+      - gparted
+      - gnome-disk-utility
+      - ncdu
+      - baobab
+      - smartmontools
+      - bleachbit

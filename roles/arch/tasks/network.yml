@@ -18,3 +18,9 @@
       - wget
       - curl
       - git
+
+- name: Install firewall
+  become: yes
+  pacman:
+    name:
+      - gufw

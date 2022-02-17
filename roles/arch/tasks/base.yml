@@ -12,9 +12,25 @@
   pacman:
     name:
       - vim
+      - tree
+      - fzf
+      - tldr
+      - jq
+      - ripgrep
+      - httpie
 
 - name: Install terminal
   become: yes
   pacman:
     name:
       - terminator
+
+- name: Install monitoring tools
+  become: yes
+  pacman:
+    name:
+      - htop
+      - btop
+      - hddtemp
+      - lm_sensors
+      - psensor
