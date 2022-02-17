@@ -1,6 +1,12 @@
 ---
+#- name: Install homebrew
+#  import_tasks: homebrew.yml  
+
 - name: Install system
   import_tasks: system.yml
+
+- name: Install base-devel
+  import_tasks: base-devel.yml
 
 - name: Install yay
   import_tasks: yay.yml

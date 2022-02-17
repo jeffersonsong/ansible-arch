@@ -60,8 +60,3 @@
   pacman:
     name:
       - plank
-
-- name: Install Albert
-  aur:
-    use: yay
-    name: albert-bin

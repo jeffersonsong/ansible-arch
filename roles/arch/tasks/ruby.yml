@@ -1,0 +1,6 @@
+---
+- name: Install RVM
+  become: yes
+  pacman:
+    name:
+      - rvm

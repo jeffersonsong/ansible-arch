@@ -1,0 +1,11 @@
+ffmpeg xx xX
+gst-plugins-bad-libs xx 
+gst-plugins-base xx XX
+gst-plugins-base-libs xx 
+gstreamer xx
+java11-openjfx xx
+libde265 xx
+openal xx
+x qt5-speech
+x qt5-webengine
+x264 XX

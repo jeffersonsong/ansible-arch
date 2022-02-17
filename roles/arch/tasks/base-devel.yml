@@ -1,0 +1,8 @@
+---
+- name: Install base-devel
+  become: yes
+  pacman:
+    name:
+      - fakeroot
+      - gcc
+      - make

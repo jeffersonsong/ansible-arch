@@ -1,0 +1,23 @@
+---
+- name: Install libyaml
+  become: yes
+  pacman:
+    name:
+      - libyaml
+
+- name: Install rvm
+  aur:
+    use: yay
+    name: rvm
+
+- name: Install ruby 2.6.8
+  shell: |
+    rvm requirements
+    rvm install 2.6.8
+
+- name: Install Homebrew and k9s using homebrew
+  include_role: 
+    name: monolithprojects.homebrew
+  vars:
+    brew_formulae:
+      - k9s

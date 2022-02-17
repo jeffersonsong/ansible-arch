@@ -1,6 +1,4 @@
 ---
 roles:
-  - name: 
-      - community.general
-      - luizgavalda.aur
-
+  - name: community.general
+  - name: luizgavalda.aur

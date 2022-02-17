@@ -1,12 +1,4 @@
 ---
-- name: Install base-devel
-  become: yes
-  pacman:
-    name:
-      - fakeroot
-      - gcc
-      - make
-
 - name: Install CLI
   become: yes
   pacman:
@@ -48,10 +40,10 @@
     use: yay
     name: stacer
 
-- name: Install hardinfo
-  aur:
-    use: yay
-    name: hardinfo
+#- name: Install hardinfo
+#  aur:
+#    use: yay
+#    name: hardinfo
 
 - name: Install vagrant
   become: yes
