@@ -36,3 +36,8 @@
       - hddtemp
       - lm_sensors
       - psensor
+
+- name: Install yay
+  aur:
+    name:
+      - yay
