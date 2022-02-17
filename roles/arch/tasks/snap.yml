@@ -1,0 +1,16 @@
+---
+- name: Install snapd
+  aur:
+    use: yay
+    name: snapd
+
+- name: Activate snapd.socket
+  become: yes
+  systemd:
+    name: snapd.socket
+    enabled: yes
+    state: started
+
+- name: Link /snap
+  become: yes
+  shell: ln -s /var/lib/snapd/snap /snap

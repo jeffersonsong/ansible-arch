@@ -1,0 +1,13 @@
+---
+- name: Install flatpak
+  become: yes
+  pacman:
+    name: flatpak
+
+#- name: Install snap
+#  import_tasks: snap.yml
+
+- name: Install pamac-aur
+  aur:
+    use: yay
+    name: pamac-aur
