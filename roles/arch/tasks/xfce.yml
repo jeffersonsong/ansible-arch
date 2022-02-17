@@ -16,6 +16,8 @@
       - xfce4-session
       - xfdesktop
       - xfce4-appfinder
+      - xfce4-artwork
+      - xfce4-power-manager
       - xfce4-settings
       - xfce4-terminal
       - xfce4-datetime-plugin
