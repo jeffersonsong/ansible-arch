@@ -35,8 +35,21 @@
       - hddtemp
       - lm_sensors
       - psensor
+      - sysbench
 
-- name: Install yay
+- name: Install stacer
   aur:
+    use: yay
+    name: stacer
+
+- name: Install hardinfo
+  aur:
+    use: yay
+    name: hardinfo
+
+- name: Install vagrant
+  become: yes
+  pacman:
     name:
-      - yay
+      - vagrant
+    

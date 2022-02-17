@@ -5,6 +5,9 @@
 #- name: Install aur
 #  import_tasks: aur.yml
 
+- name: Install yay
+  import_tasks: yay.yml
+
 - name: Install base
   import_tasks: base.yml
 
