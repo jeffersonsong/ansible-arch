@@ -1,0 +1,19 @@
+---
+- name: Install networkmanager
+  become: yes
+  pacman:
+    name:
+      - networkmanager
+
+- name: Install openssh
+  become: yes
+  pacman:
+    name:
+      - openssh
+
+- name: Install utilities
+  become: yes
+  pacman:
+    name:
+      - wget
+      - curl

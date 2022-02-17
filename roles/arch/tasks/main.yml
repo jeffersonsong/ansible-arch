@@ -1,0 +1,6 @@
+---
+- name: Install network
+  import_tasks: network.yml
+
+- name: Install xfce
+  import_tasks: xfce.yml

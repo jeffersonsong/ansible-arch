@@ -1,0 +1,48 @@
+---
+- name: Install xorg
+  become: yes
+  pacman:
+    name:
+      - xorg-server
+      - xf86-video-vesa
+
+- name: Install xfce4
+  become: yes
+  pacman:
+    name:
+      - xfwm4
+      - xfce4-panel
+      - xfce4-session
+      - xfdesktop
+      - xfce4-appfinder
+      - xfce4-settings
+      - xfce4-terminal
+      - xfce4-datetime-plugin
+      - xfce4-netload-plugin
+      - xfce4-pulseaudio-plugin 
+      - xfce4-weather-plugin
+      - xfce4-whiskermenu-plugin 
+
+- name: Install lxdm
+  become: yes
+  pacman:
+    name:
+      - lxdm
+
+- name: Enable lxdm
+  become: yes
+  systemd:
+    name: lxdm.service
+    enabled: yes      
+
+- name: Install file manager
+  become: yes
+  pacman:
+    name:
+      - thunar
+
+- name: Install mousepad
+  become: yes
+  pacman:
+    name:
+      - mousepad
