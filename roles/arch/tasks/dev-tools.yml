@@ -36,7 +36,6 @@
     name:
       - datagrip
 
-
 - name: Install editors
   become: yes
   pacman:
@@ -44,11 +43,11 @@
       - bluefish
       - geany
       - emacs
-      #- haroopad
 
-- name: Install sublime text 4
+- name: Install editors from aur
   aur:
     use: yay
     name:
+      - visual-studio-code-bin
       - sublime-text-4
-  
+      #- haroopad      

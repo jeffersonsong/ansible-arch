@@ -48,8 +48,3 @@
   pacman:
     name:
       - vagrant
-    
-- name: Install vscode
-  aur:
-    use: yay
-    name: visual-studio-code-bin
