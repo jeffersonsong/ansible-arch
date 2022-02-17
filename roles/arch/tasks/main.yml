@@ -2,6 +2,9 @@
 - name: Install system
   import_tasks: system.yml
 
+- name: Install aur
+  import_tasks: aur.yml
+
 - name: Install base
   import_tasks: base.yml
 
