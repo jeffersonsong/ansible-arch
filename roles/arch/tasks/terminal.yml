@@ -1,7 +1,0 @@
----
-- name: Install terminal
-  become: yes
-  pacman:
-    name:
-      - terminator
-    state: present

@@ -14,9 +14,6 @@
 - name: Install base
   import_tasks: base.yml
 
-- name: Install terminal
-  import_tasks: terminal.yml
-
 - name: Install software
   import_tasks: software.yml
   
