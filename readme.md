@@ -6,4 +6,6 @@ ansible-playbook install.yml
 ansible-playbook base.yml
 
 ansible-galaxy install monolithprojects.homebrew
+ansible-playbook dev.yml
+
 ansible-playbook playbook.yml
