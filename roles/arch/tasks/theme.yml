@@ -6,12 +6,50 @@
       - whitesur-gtk-theme-git
       - whitesur-icon-theme-git
       - whitesur-cursor-theme-git
+
+- name: Download Elementary OS wallpapers
+  aur:
+    use: yay
+    name:       
       - elementary-wallpapers-git
-      - mint-backgrounds-una
+
+- name: Download MacOS wallpapers
+  aur:
+    use: yay
+    name:      
       - dynamic-wallpaper-mojave-images-git
       - dynamic-wallpaper-catalina-images-git
+
+- name: Download Ubuntu wallpapers
+  aur:
+    use: yay
+    name:      
+      - ubuntu-backgrounds-focal
+
+- name: Download Linux Mint wallpapers
+  aur:
+    use: yay
+    name:      
+      - mint-backgrounds-una
+      
+- name: Download Arch Linux wallpapers
+  aur:
+    use: yay
+    name:
+      - archlinux-wallpaper
       - arch-logo-dark-wallpapers
       - arch-linux-2d-wallpapers
-      - ubuntu-backgrounds-focal
+
+- name: Download trougnouf-backgrounds
+  aur:
+    use: yay
+    name:
       - trougnouf-backgrounds
-      - archlinux-wallpaper
+
+- name: Download EndeavourOS community wallpaper
+  become_user: "{{ username }}"
+  become: yes
+  shell: |
+    mkdir ~/Pictures
+    cd ~/Pictures
+    git clone https://github.com/EndeavourOS-Community-Editions/Community-wallpapers.git
