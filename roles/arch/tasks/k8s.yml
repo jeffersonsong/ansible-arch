@@ -16,7 +16,7 @@
  
 - name: Install k3d
   become: yes
-  ansible.builtin.shell: |
+  shell: |
     wget -q -O - https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash
 
 - name: Install minikube
@@ -26,8 +26,10 @@
     dest: /usr/local/bin/minikube
     mode: 0755
 
-#- name: Install Lens IDE
-#  import_tasks: lens.yml
+- name: Install Lens IDE
+  aur:
+    use: yay
+    name: lens-bin
 
 - name: Install Skaffold
   become: yes
@@ -38,7 +40,7 @@
 
 - name: Install helm
   become: yes
-  ansible.builtin.shell: |
+  shell: |
     curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
 - name: Install telepresence

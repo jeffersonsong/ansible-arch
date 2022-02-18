@@ -16,3 +16,10 @@
         name: "{{ username }}"
         password: "{{ password | password_hash('sha512') }}"
         state: present
+
+    - name: mkdirs
+      become_user: "{{ username }}"
+      become: yes
+      shell: |
+        mkdir ~/Documents
+        mkdir ~/Downloads
