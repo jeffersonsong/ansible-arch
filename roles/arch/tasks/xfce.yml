@@ -1,39 +1,10 @@
 ---
-- name: Install minimal xorg
+- name: Uninstall xfce4-terminal
   become: yes
   pacman:
     name:
-      - xorg-server
-    state: present
-
-- name: Install graphic drivers
-  become: yes
-  pacman:
-    name:
-      - xf86-video-vesa
-      - xf86-video-amdgpu
-    state: present
-
-- name: Install minimal xfce4
-  become: yes
-  pacman:
-    name:
-      - xfwm4
-      - xfce4-panel
-      - xfce4-session
-      - xfdesktop
-      - thunar
-      - tumbler  # Image preview
-    state: present
-
-- name: Install selective xfce4
-  become: yes
-  pacman:
-    name:
-      - xfce4-appfinder
-      - xfce4-power-manager
-      - xfce4-settings
-    state: present
+      - xfce4-terminal
+    state: absent
 
 # Choose terminator over xfce4-terminal
 - name: Install Terminator
@@ -42,31 +13,6 @@
     name:
       - terminator
     state: present
-
-- name: Install selective xfce4 goodies
-  become: yes
-  pacman:
-    name:
-      - mousepad
-      - xfce4-artwork
-      - xfce4-datetime-plugin
-      - xfce4-netload-plugin
-      - xfce4-screensaver
-      - xfce4-weather-plugin
-      - xfce4-whiskermenu-plugin
-    state: present
-
-- name: Install lxdm
-  become: yes
-  pacman:
-    name:
-      - lxdm
-
-- name: Enable lxdm
-  become: yes
-  systemd:
-    name: lxdm.service
-    enabled: yes      
 
 - name: Install plank
   become: yes

@@ -2,20 +2,10 @@
 #- name: Install homebrew
 #  import_tasks: homebrew.yml  
 
-- name: Install system
-  import_tasks: system.yml
-
 - name: Install base-devel
   import_tasks: base-devel.yml
-
-- name: Install yay
-  import_tasks: yay.yml
-
 - name: Install base
   import_tasks: base.yml
-
-- name: Install software
-  import_tasks: software.yml
 
 - name: Install network
   import_tasks: network.yml
@@ -55,4 +45,3 @@
 
 - name: Install theme
   import_tasks: theme.yml  
-

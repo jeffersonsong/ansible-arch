@@ -16,21 +16,14 @@
   become: yes
   pacman:
     name:
-      - p7zip
-      - unrar
       - unzip
-      - xz
       - zip
-      - bzip2
-      - gzip
-      - tar
     state: present
 
 - name: Install monitoring tools
   become: yes
   pacman:
     name:
-      - htop
       - btop
       - hddtemp
       - lm_sensors

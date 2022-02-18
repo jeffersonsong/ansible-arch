@@ -1,0 +1,1 @@
+Create a xfce desktop environment, which functionally match Manjaro xfce fresh installation.

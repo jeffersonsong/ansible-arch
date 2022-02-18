@@ -1,0 +1,19 @@
+---
+- name: create user
+  become: yes
+  user:
+    name: "{{ username }}"
+    password: "{{ password | password_hash('sha512') }}"
+    groups: wheel
+    state: present
+
+- name: mkdirs
+  become_user: "{{ username }}"
+  become: yes
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0755'
+  with_items:
+    - ~/Documents
+    - ~/Downloads

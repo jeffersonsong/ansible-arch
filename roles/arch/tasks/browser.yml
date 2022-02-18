@@ -1,4 +1,11 @@
 ---
+- name: Uninstall firefox
+  become: yes
+  pacman:
+    name:
+      - firefox
+    state: absent
+
 - name: Install Google Chrome
   aur:
     use: yay

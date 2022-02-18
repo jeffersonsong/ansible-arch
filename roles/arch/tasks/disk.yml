@@ -3,7 +3,6 @@
   become: yes
   pacman:
     name:      
-      - gparted
       - gnome-disk-utility
       - ncdu
       - baobab
@@ -11,7 +10,3 @@
       - bleachbit
     state: present
 
-- name: Install timeshift
-  aur:
-    use: yay
-    name: timeshift

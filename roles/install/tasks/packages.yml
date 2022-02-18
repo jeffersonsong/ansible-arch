@@ -1,0 +1,142 @@
+---
+- name: Install networkmanager
+  become: yes
+  pacman:
+    name:
+      - networkmanager
+      - openssh
+      - sudo
+    state: present
+
+- name: Install minimal xorg
+  become: yes
+  pacman:
+    name:
+      - xorg-server
+    state: present
+
+- name: Install graphic drivers
+  become: yes
+  pacman:
+    name:
+      - xf86-video-vesa
+      - xf86-video-amdgpu
+    state: present
+
+- name: Install minimal xfce4
+  become: yes
+  pacman:
+    name:
+      - xfwm4
+      - xfce4-panel
+      - xfce4-session      
+      - xfdesktop
+      - thunar
+      - tumbler  # Image preview
+    state: present
+
+- name: Install selective xfce4
+  become: yes
+  pacman:
+    name:
+      - xfce4-appfinder
+      - xfce4-power-manager
+      - xfce4-settings
+      - xfce4-terminal
+    state: present
+
+- name: Install selective xfce4 goodies
+  become: yes
+  pacman:
+    name:
+      - mousepad
+      - xfce4-artwork
+      - xfce4-datetime-plugin
+      - xfce4-netload-plugin
+      - xfce4-screensaver
+      - xfce4-weather-plugin
+      - xfce4-whiskermenu-plugin
+    state: present
+
+- name: Install lxdm
+  become: yes
+  pacman:
+    name:
+      - lxdm
+
+- name: Enable lxdm
+  become: yes
+  systemd:
+    name: lxdm.service
+    enabled: yes
+
+- name: Install firefox
+  become: yes
+  pacman:
+    name:
+      - firefox
+
+- name: Install gparted
+  become: yes
+  pacman:
+    name:
+      - gparted
+
+- name: Install firewall
+  become: yes
+  pacman:
+    name:
+      - gufw
+    state: present
+
+- name: Install htop
+  become: yes
+  pacman:
+    name:
+      - htop
+
+- name: Install base-devel
+  become: yes
+  pacman:
+    name:
+      - base-devel
+
+- name: Install yay
+  import_tasks: yay.yml
+
+- name: Install timeshift
+  aur:
+    use: yay
+    name: timeshift
+
+- name: Install flatpak
+  become: yes
+  pacman:
+    name: flatpak
+    state: present    
+  
+- name: Install snap
+  import_tasks: snap.yml
+  
+- name: Install pamac-aur
+  aur:
+    use: yay
+    name: pamac-aur
+
+- name: Install archival tools
+  become: yes
+  pacman:
+    name:
+      - p7zip
+      - bzip2
+      - gzip
+      - xz
+      - tar
+      - unrar
+    state: present
+
+- name: Install wget
+  become: yes
+  pacman:
+    name:
+      - wget
