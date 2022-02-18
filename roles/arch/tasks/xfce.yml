@@ -74,3 +74,8 @@
     name:
       - plank
     state: present
+
+- name: Install Albert
+  aur:
+    use: yay
+    name: albert-bin
