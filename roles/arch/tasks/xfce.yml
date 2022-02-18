@@ -23,6 +23,7 @@
       - xfce4-session
       - xfdesktop
       - thunar
+      - tumbler
     state: present
 
 - name: Install selective xfce4
