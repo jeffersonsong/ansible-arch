@@ -52,3 +52,9 @@
 
 - name: Install krew
   import_tasks: krew.yml
+
+- name: Install k9s
+  become: yes
+  pacman:
+    name:
+      - k9s

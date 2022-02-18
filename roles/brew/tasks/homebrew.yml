@@ -1,0 +1,24 @@
+---
+# Manually install brew
+- name: Install kustomize
+  community.general.homebrew:
+    name: kustomize
+    state: present
+
+- name: Tap hashicorp/tap repo
+  community.general.homebrew_tap:
+    name: hashicorp/tap
+
+- name: Install terraform
+  community.general.homebrew:
+    name: hashicorp/tap/terraform
+    state: present
+
+- name: Tap johanhaleby/kubetail repo
+  community.general.homebrew_tap:
+    name: johanhaleby/kubetail
+
+- name: Install kubetail
+  community.general.homebrew:
+    name: kubetail
+    state: present

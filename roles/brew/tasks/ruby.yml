@@ -1,0 +1,7 @@
+---
+- name: Install libyaml
+  become: yes
+  pacman:
+    name:
+      - libyaml
+    state: present
