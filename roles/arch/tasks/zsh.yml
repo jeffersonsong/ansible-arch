@@ -8,7 +8,28 @@
       - zsh-syntax-highlighting
     state: present
 
-#- name: change user shell to zsh
-#  become: yes
-#  become_user: root
-#  command: chsh -s /bin/zsh "{{ username }}"
+- name: change user shell to zsh
+  become: yes
+  user: 
+    name: "{{ username }}"
+    shell: /bin/zsh
+    groups: wheel
+    append: yes
+
+- name: Create empty .zshrc if absent
+  become_user: "{{ username }}"
+  become: yes
+  shell: touch $HOME/.zshrc
+
+- name: Check oh-my-zsh
+  become_user: "{{ username }}"
+  become: yes
+  stat:
+    path: $HOME/.oh-my-zsh
+  register: oh_my_zsh
+
+- name: Install On My Zsh
+  become_user: "{{ username }}"
+  become: yes
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  when: not oh_my_zsh.stat.exists
