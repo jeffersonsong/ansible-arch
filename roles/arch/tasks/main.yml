@@ -55,3 +55,7 @@
 
 - name: Install productivity tools
   import_tasks: productivity.yml
+
+- name: Install theme
+  import_tasks: theme.yml  
+

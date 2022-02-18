@@ -1,0 +1,17 @@
+---
+- name: Download theme
+  aur:
+    use: yay
+    name: 
+      - whitesur-gtk-theme-git
+      - whitesur-icon-theme-git
+      - whitesur-cursor-theme-git
+      - elementary-wallpapers-git
+      - mint-backgrounds-una
+      - dynamic-wallpaper-mojave-images-git
+      - dynamic-wallpaper-catalina-images-git
+      - arch-logo-dark-wallpapers
+      - arch-linux-2d-wallpapers
+      - ubuntu-backgrounds-focal
+      - trougnouf-backgrounds
+      - archlinux-wallpaper
