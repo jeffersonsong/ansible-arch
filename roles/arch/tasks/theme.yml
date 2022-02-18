@@ -7,11 +7,17 @@
       - whitesur-icon-theme-git
       - whitesur-cursor-theme-git
 
-- name: Download Elementary OS wallpapers
-  aur:
-    use: yay
-    name:       
-      - elementary-wallpapers-git
+
+- name: Install wallpapers
+  become: yes
+  pacman:
+    name:
+      - gnome-backgrounds
+      - mate-backgrounds
+      - deepin-wallpapers
+      - elementary-wallpapers
+      - plasma-workspace-wallpapers
+      - archlinux-wallpaper
 
 - name: Download MacOS wallpapers
   aur:
@@ -36,12 +42,4 @@
   aur:
     use: yay
     name:
-      - archlinux-wallpaper
       - arch-logo-dark-wallpapers
-      - arch-linux-2d-wallpapers
-
-- name: Download trougnouf-backgrounds
-  aur:
-    use: yay
-    name:
-      - trougnouf-backgrounds
