@@ -3,7 +3,9 @@
   become: yes
   pacman:
     name:
-      - fakeroot
-      - gcc
-      - make
+      - base-devel
+      #- fakeroot
+      #- gcc
+      #- make
+      #- patch      
     state: present
