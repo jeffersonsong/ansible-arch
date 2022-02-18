@@ -20,7 +20,7 @@
       - postman
       - grpcurl
       - ngrok
-      #- bloomrpc-bin
+      - bloomrpc-bin
 
 - name: Install db tools
   aur: 

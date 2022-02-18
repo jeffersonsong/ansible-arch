@@ -4,10 +4,10 @@
   pacman:
     name: flatpak
     state: present    
-
-#- name: Install snap
-#  import_tasks: snap.yml
-
+  
+- name: Install snap
+  import_tasks: snap.yml
+  
 - name: Install pamac-aur
   aur:
     use: yay

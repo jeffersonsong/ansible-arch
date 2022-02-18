@@ -16,10 +16,7 @@
 
 - name: Install software
   import_tasks: software.yml
-  
-- name: Install snap
-  import_tasks: snap.yml
-  
+
 - name: Install network
   import_tasks: network.yml
 
