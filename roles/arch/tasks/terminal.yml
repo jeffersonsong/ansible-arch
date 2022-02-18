@@ -5,8 +5,3 @@
     name:
       - terminator
     state: present
-
-- name: Install Hyper
-  aur:
-    use: yay
-    name: hyper-bin

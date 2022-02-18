@@ -32,8 +32,8 @@
     name:
       - xfce4-appfinder
       - xfce4-power-manager
-      - xfce4-terminal
       - xfce4-settings
+      - terminator
     state: present
 
 - name: Install selective xfce4 goodies
