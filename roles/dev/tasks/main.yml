@@ -23,5 +23,3 @@
 - name: Install k8s
   import_tasks: k8s.yml  
 
-- name: Install krew
-  import_tasks: krew.yml

@@ -50,3 +50,5 @@
     dest: /usr/local/bin/telepresence
     mode: 0755
 
+- name: Install krew
+  import_tasks: krew.yml
