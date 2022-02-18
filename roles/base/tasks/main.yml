@@ -1,3 +1,7 @@
+---
+- name: Enable sudoer
+  import_tasks: sudo.yml
+ 
 - name: Install zsh
   import_tasks: zsh.yml
 

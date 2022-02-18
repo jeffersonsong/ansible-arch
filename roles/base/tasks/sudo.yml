@@ -1,0 +1,9 @@
+---
+- name: Validate the sudoers file before saving
+  become: yes
+  lineinfile:
+    path: /etc/sudoers
+    state: present
+    regexp: '^%wheel ALL=(ALL) ALL'
+    line: '%wheel ALL=(ALL) ALL'
+    validate: /usr/sbin/visudo -cf %s
