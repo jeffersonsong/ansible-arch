@@ -7,7 +7,6 @@
       - whitesur-icon-theme-git
       - whitesur-cursor-theme-git
 
-
 - name: Install wallpapers
   become: yes
   pacman:

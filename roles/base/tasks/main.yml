@@ -1,0 +1,23 @@
+- name: Install zsh
+  import_tasks: zsh.yml
+
+- name: Install cli
+  import_tasks: cli.yml
+
+- name: Install disk
+  import_tasks: disk.yml
+
+- name: Install monitor
+  import_tasks: monitor.yml  
+
+- name: Install browser
+  import_tasks: browser.yml
+
+- name: Install xfce
+  import_tasks: xfce.yml
+
+- name: Install background
+  import_tasks: background.yml
+
+- name: Install productivity
+  import_tasks: productivity.yml

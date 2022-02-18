@@ -1,4 +1,11 @@
 ---
+- name: Install vagrant
+  become: yes
+  pacman:
+    name:
+      - vagrant
+    state: present    
+
 - name: Install protobuf
   become: yes
   pacman:

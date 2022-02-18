@@ -1,9 +1,0 @@
----
-- name: Install utilities
-  become: yes
-  pacman:
-    name:
-      - curl
-      - git
-    state: present
-

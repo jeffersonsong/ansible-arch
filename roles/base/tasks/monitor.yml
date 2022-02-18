@@ -1,0 +1,21 @@
+---
+- name: Install monitoring tools
+  become: yes
+  pacman:
+    name:
+      - btop
+      - hddtemp
+      - lm_sensors
+      - psensor
+      - sysbench
+    state: present
+
+- name: Install stacer
+  aur:
+    use: yay
+    name: stacer
+
+- name: Install hardinfo
+  aur:
+    use: yay
+    name: hardinfo

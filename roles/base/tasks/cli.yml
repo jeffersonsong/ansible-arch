@@ -1,0 +1,30 @@
+---
+- name: Install network utilities
+  become: yes
+  pacman:
+    name:
+      - curl
+      - git
+    state: present
+
+- name: Install CLI
+  become: yes
+  pacman:
+    name:
+      - vim
+      - tree
+      - fzf
+      - tldr
+      - jq
+      - ripgrep
+      - httpie
+      - neofetch      
+    state: present
+
+- name: Install archival tools
+  become: yes
+  pacman:
+    name:
+      - unzip
+      - zip
+    state: present

@@ -9,7 +9,6 @@
       - okular
       #- pdfshuffler
       - libreoffice
-      - neofetch
     state: present
 
 #- name: Install PDF

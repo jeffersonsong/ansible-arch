@@ -9,4 +9,3 @@
       - smartmontools
       - bleachbit
     state: present
-
