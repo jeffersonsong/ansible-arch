@@ -12,12 +12,11 @@
   become: yes
   pacman:
     name:
+      - archlinux-wallpaper
       - gnome-backgrounds
       - mate-backgrounds
       - deepin-wallpapers
       - elementary-wallpapers
-      - plasma-workspace-wallpapers
-      - archlinux-wallpaper
 
 - name: Download MacOS wallpapers
   aur:
@@ -43,3 +42,9 @@
     use: yay
     name:
       - arch-logo-dark-wallpapers
+
+- name: Install fondo
+  aur:
+    use: yay
+    name:      
+      - fondo      
