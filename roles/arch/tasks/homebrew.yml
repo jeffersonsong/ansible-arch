@@ -12,11 +12,15 @@
     name: rvm
 
 - name: Install ruby 2.6.8
+  become_user: "{{ username }}"
+  become: yes
   shell: |
     rvm requirements
     rvm install 2.6.8
 
 - name: Install Homebrew and k9s using homebrew
+  become_user: "{{ username }}"
+  become: yes
   include_role: 
     name: monolithprojects.homebrew
   vars:
