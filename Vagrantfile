@@ -1,6 +1,5 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-
 Vagrant.configure("2") do |config|
   config.vm.box = "archlinux/archlinux"
   config.vm.synced_folder './', '/vagrant', type: '9p'
@@ -13,7 +12,4 @@ Vagrant.configure("2") do |config|
     libvirt.video_type = 'qxl'
     libvirt.sound_type = 'ich9'
   end
-  #config.vm.provision "shell", inline: <<-SHELL
-  #  sudo pacman -Syu ansible git wget
-  #SHELL
 end

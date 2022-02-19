@@ -23,3 +23,10 @@
   become: yes
   timezone:
     name: '{{ timezone }}'
+
+- name: Link vi
+  become: yes
+  file:
+    src: "/usr/bin/vim"
+    dest: "/usr/bin/vi"
+    state: link

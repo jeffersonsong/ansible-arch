@@ -1,11 +1,17 @@
-sudo pacman -Syu ansible git vim
-ansible-galaxy install luizgavalda.aur
+`# sudo pacman -Syu ansible git vim`
 
-# ansible-playbook create_user.yml
-ansible-playbook install.yml
-ansible-playbook base.yml
+`# ansible-galaxy install luizgavalda.aur`
 
-ansible-galaxy install monolithprojects.homebrew
-ansible-playbook dev.yml
+`# ansible-galaxy collection install community.general`
 
-ansible-playbook playbook.yml
+`# ansible-playbook create_user.yml`
+
+`# ansible-playbook install.yml`
+
+`# ansible-playbook base.yml`
+
+Install linuxbrew manually
+
+`# ansible-playbook dev.yml`
+
+`# ansible-playbook brew.yml`
