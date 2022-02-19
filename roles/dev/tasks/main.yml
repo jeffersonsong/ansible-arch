@@ -1,7 +1,4 @@
 ---
-- name: Install base-devel
-  import_tasks: base-devel.yml
-
 - name: Install c_cpp
   import_tasks: c_cpp.yml
 

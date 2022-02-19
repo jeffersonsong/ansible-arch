@@ -8,6 +8,9 @@
 - name: Install cli
   import_tasks: cli.yml
 
+- name: Install base-devel
+  import_tasks: base-devel.yml
+
 - name: Install yay
   import_tasks: yay.yml
 
