@@ -2,7 +2,6 @@
 - name: Install docker
   become: yes
   pacman:
-    state: present
     name:
       - docker
       - docker-compose
@@ -20,4 +19,4 @@
   systemd: 
     name: docker.service
     enabled: yes
-    state: started
+    #state: started
