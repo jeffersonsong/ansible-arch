@@ -38,10 +38,10 @@
       - squirrel-sql
       - redis-desktop-manager
 
-- name: Install DataGrip
-  flatpak:
-    name:
-      - datagrip
+#- name: Install DataGrip
+#  flatpak:
+#    name:
+#      - datagrip
 
 - name: Install editors
   become: yes
