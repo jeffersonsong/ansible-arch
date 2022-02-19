@@ -4,13 +4,17 @@
 
 `# ansible-galaxy collection install community.general`
 
+# Start from Arch linux
+
 `# ansible-playbook create_user.yml`
 
 `# ansible-playbook install.yml`
 
+# Start from Manjaro
+
 `# ansible-playbook base.yml`
 
-Install linuxbrew manually
+# Install linuxbrew manually
 
 `# ansible-playbook dev.yml`
 
