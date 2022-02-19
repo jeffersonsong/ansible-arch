@@ -10,11 +10,11 @@
 
 `# ansible-playbook install.yml`
 
-# Start from Manjaro
+# Start from Arch xfce or Manjaro
 
 `# ansible-playbook base.yml`
 
-# Install linuxbrew manually
+## Install linuxbrew manually
 
 `# ansible-playbook dev.yml`
 
