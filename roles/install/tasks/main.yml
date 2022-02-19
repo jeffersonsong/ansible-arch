@@ -5,5 +5,5 @@
 - name: System config
   import_tasks: system-config.yml
 
-- name: Create user
-  import_tasks: user.yml
+#- name: Create user
+#  import_tasks: user.yml
