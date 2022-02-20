@@ -11,7 +11,7 @@
   become: yes
   pacman:
     name:
-      - archlinux-wallpaper
+      #- archlinux-wallpaper
       - gnome-backgrounds
       - mate-backgrounds
       - deepin-wallpapers
