@@ -17,3 +17,5 @@
 - name: Install k8s
   import_tasks: k8s.yml  
 
+- name: Install kvm
+  import_tasks: kvm.yml

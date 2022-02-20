@@ -1,0 +1,54 @@
+---
+- name: Install KVM packages
+  become: yes
+  pacman:
+    name:
+      - qemu
+      - virt-manager
+      - dnsmasq
+      - dmidecode
+      - vde2
+    state: present
+
+- name: Start KVM libvirt service
+  become: yes
+  systemd: 
+    name: libvirtd.service
+    enabled: yes
+    #state: started
+
+- name: Enable normal user account to use KVM
+  become: yes
+  lineinfile: 
+    path: /etc/libvirt/libvirtd.conf
+    state: present
+    regexp: '{{item.From}}'
+    # Line to Replace with
+    line: '{{item.To}}'
+    state: present
+  with_items:
+    - { From: '#unix_sock_group = "libvirt"', To: 'unix_sock_group = "libvirt"' }
+    - { From: '#unix_sock_rw_perms = "0770"', To: 'unix_sock_rw_perms = "0770"' }
+
+- name: Add the user to kvm group
+  become: yes
+  user: 
+    name: "{{ username }}"
+    groups:
+      - libvirt 
+    append: yes
+
+- name: Install vagrant plugins
+  become_user: "{{ username }}"
+  become: yes
+  shell: |
+    vagrant plugin install vagrant-libvirt
+    vagrant plugin install vagrant-mutate
+
+- name: Use libvirt as default
+  become_user: "{{ username }}"
+  become: yes
+  lineinfile:
+    path: ~/.zshrc
+    line: 'export VAGRANT_DEFAULT_PROVIDER=libvirt'
+    state: present
