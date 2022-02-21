@@ -27,7 +27,7 @@
   lineinfile:
     path: ~/.zshrc
     line: 'export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"'
-    insertafter: EOF
+    state: present
   when: not krew.stat.exists
 
 - name: Install kubectx, kubens

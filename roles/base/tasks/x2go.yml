@@ -24,13 +24,10 @@
   become: yes
   lineinfile:
     path: /etc/ssh/sshd_config
-    regexp: '{{item.From}}'
-    # Line to Replace with
-    line: '{{item.To}}'
+    line: '{{item}}'
     state: present
   with_items:
-    - { From: '^#X11Forwarding no', To: 'X11Forwarding yes' }
-    - { From: '^#AllowTcpForwarding yes', To: 'AllowTcpForwarding yes' }
-    - { From: '^#X11UseLocalhost yes', To: 'X11UseLocalhost yes' }
-    - { From: '^#X11DisplayOffset 10', To: 'X11DisplayOffset 10' }
-    - { From: '^#PasswordAuthentication yes', To: 'PasswordAuthentication yes' }
+    - 'X11Forwarding yes'
+    - 'AllowTcpForwarding yes'
+    - 'X11UseLocalhost yes'
+    - 'X11DisplayOffset 10'
