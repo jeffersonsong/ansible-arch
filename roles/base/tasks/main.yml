@@ -26,6 +26,9 @@
 - name: Install xfce
   import_tasks: xfce.yml
 
+- name: Install x2go
+  import_tasks: x2go.yml
+
 - name: Install background
   import_tasks: background.yml
 

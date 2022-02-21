@@ -1,0 +1,36 @@
+---
+- name: Install x2goserver
+  become: yes
+  pacman:
+    name:
+      - x2goserver
+    state: present
+
+- name: Install x2goclient
+  become: yes
+  pacman:
+    name:
+      - x2goclient
+    state: present
+
+- name: Enable and start x2goserver.service
+  become: yes
+  systemd: 
+    name: x2goserver.service
+    enabled: yes
+    #state: started
+
+- name : Enabel X11 forwarding
+  become: yes
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '{{item.From}}'
+    # Line to Replace with
+    line: '{{item.To}}'
+    state: present
+  with_items:
+    - { From: '^#X11Forwarding no', To: 'X11Forwarding yes' }
+    - { From: '^#AllowTcpForwarding yes', To: 'AllowTcpForwarding yes' }
+    - { From: '^#X11UseLocalhost yes', To: 'X11UseLocalhost yes' }
+    - { From: '^#X11DisplayOffset 10', To: 'X11DisplayOffset 10' }
+    - { From: '^#PasswordAuthentication yes', To: 'PasswordAuthentication yes' }
