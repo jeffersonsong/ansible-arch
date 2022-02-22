@@ -1,0 +1,8 @@
+base 2-2
+btrfs-progs 5.16.1-1
+grub 2:2.06-4
+linux 5.16.9.arch1-1
+openssh 8.8p1-1
+polkit 0.120-4
+reflector 2021.11-2
+sudo 1.9.9-2
