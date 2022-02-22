@@ -14,12 +14,6 @@
       - meld
     state: present
 
-- name: Install ngrok
-  aur:
-    use: yay
-    name:
-      - ngrok
-
 - name: Install service test tools
   aur:
     use: yay
