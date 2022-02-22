@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 Vagrant.configure("2") do |config|
   config.vm.box = "archlinux/archlinux"
-  config.vm.synced_folder './', '/vagrant'
+  config.vm.synced_folder './', '/vagrant', type: '9p'
   config.vm.provider :libvirt do |libvirt|
     libvirt.cpus = 4
     libvirt.memory = 16384    
