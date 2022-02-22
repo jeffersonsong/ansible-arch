@@ -9,3 +9,10 @@
       - smartmontools
       - bleachbit
     state: present
+
+- name: Enable TRIM for SSD
+  become: yes
+  systemd: 
+    name: fstrim.timer
+    enabled: yes
+    #state: started

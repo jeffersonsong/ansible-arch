@@ -9,6 +9,8 @@
       - okular
       #- pdfshuffler
       - libreoffice
+      - redshift
+      - keepassxc
     state: present
 
 #- name: Install PDF
