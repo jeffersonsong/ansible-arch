@@ -14,6 +14,9 @@
 - name: Install yay
   import_tasks: yay.yml
 
+- name: Install editors
+  import_tasks: editors.yml
+
 - name: Install disk
   import_tasks: disk.yml
 

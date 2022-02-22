@@ -1,0 +1,18 @@
+---
+- name: Install editors
+  become: yes
+  pacman:
+    name:
+      - vim
+      #- bluefish
+      #- geany
+      - emacs
+    state: present
+
+- name: Install editors from aur
+  aur:
+    use: yay
+    name:
+      - visual-studio-code-bin
+      - sublime-text-4
+      - haroopad
