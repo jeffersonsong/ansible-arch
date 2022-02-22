@@ -15,4 +15,4 @@
   systemd: 
     name: fstrim.timer
     enabled: yes
-    #state: started
+    state: started

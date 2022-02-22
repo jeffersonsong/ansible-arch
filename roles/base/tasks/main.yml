@@ -1,4 +1,7 @@
 ---
+- name: System updates
+  import_tasks: updates.yml
+
 - name: Enable sudoer
   import_tasks: sudo.yml
  

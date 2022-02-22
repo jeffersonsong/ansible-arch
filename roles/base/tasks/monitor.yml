@@ -8,6 +8,7 @@
       - lm_sensors
       - psensor
       - sysbench
+      - conky
     state: present
 
 - name: Install stacer

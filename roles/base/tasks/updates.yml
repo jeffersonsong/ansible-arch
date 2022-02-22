@@ -1,0 +1,12 @@
+---
+- name: Locate the closest (or the fastest) mirror for updating your Manjaro system
+  become: yes
+  shell: pacman-mirrors --fasttrack
+
+- name: Update Your System
+  become: yes
+  pacman:
+    update_cache: yes
+    upgrade: yes    
+  tags:
+    - upgrade

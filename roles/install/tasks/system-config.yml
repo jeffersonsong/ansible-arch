@@ -1,12 +1,4 @@
 ---
-- name: Refresh pacman mirrors
-  become: yes
-  pacman:
-    update_cache: yes
-    upgrade: yes    
-  tags:
-    - upgrade
-
 - name: Ensure locale en_US.UTF-8 locale is present
   become: yes
   locale_gen:
