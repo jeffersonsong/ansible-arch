@@ -35,5 +35,8 @@
 - name: Install background
   import_tasks: background.yml
 
+- name: Install fonts
+  import_tasks: fonts.yml
+
 - name: Install productivity
   import_tasks: productivity.yml

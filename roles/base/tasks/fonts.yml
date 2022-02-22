@@ -1,0 +1,6 @@
+---
+- name: Install Microsoft Fonts
+  aur:
+    use: yay
+    name:
+      - ttf-ms-fonts
