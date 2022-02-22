@@ -1,0 +1,14 @@
+---
+- name: Install db tools
+  aur: 
+    use: yay
+    name:
+      - dbeaver
+      - mysql-workbench
+      - squirrel-sql
+      - redis-desktop-manager
+
+#- name: Install DataGrip
+#  flatpak:
+#    name:
+#      - datagrip

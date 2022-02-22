@@ -1,0 +1,9 @@
+---
+- name: Install service test tools
+  aur:
+    use: yay
+    name:
+      - postman
+      - grpcurl
+      - ngrok
+      - bloomrpc-bin

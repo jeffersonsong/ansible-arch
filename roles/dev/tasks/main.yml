@@ -11,6 +11,12 @@
 - name: Install dev tools
   import_tasks: dev-tools.yml
 
+- name: Install db tools
+  import_tasks: db-tools.yml
+
+- name: Install testing tools
+  import_tasks: testing.yml
+
 - name: Install docker
   import_tasks: docker.yml
 
