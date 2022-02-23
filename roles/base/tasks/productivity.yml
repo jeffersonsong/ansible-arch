@@ -6,12 +6,16 @@
       - shotwell
       - peek
       - flameshot
-      - okular
-      #- pdfshuffler
       - libreoffice
       - redshift
       - keepassxc
     state: present
+
+- name: Install pdf reader
+  become: yes
+  pacman:
+    name:
+      - okular
 
 #- name: Install PDF
 #  flatpak:
