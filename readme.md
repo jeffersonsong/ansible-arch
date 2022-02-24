@@ -1,12 +1,12 @@
 `# sudo pacman -Syu ansible git vim`
+`# ansible-playbook create_user.yml`
+
+reboot, login as user
 
 `# ansible-galaxy install luizgavalda.aur`
-
 `# ansible-galaxy collection install community.general`
 
 # Start from Arch linux
-
-`# ansible-playbook create_user.yml`
 
 `# ansible-playbook install.yml`
 

@@ -15,7 +15,17 @@
       user:
         name: "{{ username }}"
         password: "{{ password | password_hash('sha512') }}"
+        groups: wheel
         state: present
+
+    - name: Validate the sudoers file before saving
+      become: yes
+      lineinfile:
+        path: /etc/sudoers
+        state: present
+        regexp: '^# %wheel ALL=(ALL:ALL) NOPASSWD: ALL'
+        line: '%wheel ALL=(ALL:ALL) NOPASSWD: ALL'
+        validate: /usr/sbin/visudo -cf %s
 
     - name: mkdirs
       become_user: "{{ username }}"

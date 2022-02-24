@@ -13,7 +13,6 @@
   user: 
     name: "{{ username }}"
     shell: /bin/zsh
-    groups: wheel
     append: yes
 
 - name: Create empty .zshrc if absent
