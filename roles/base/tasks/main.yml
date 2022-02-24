@@ -17,6 +17,9 @@
 - name: Install yay
   import_tasks: yay.yml
 
+- name: Install terminal
+  import_tasks: terminal.yml
+
 - name: Install editors
   import_tasks: editors.yml
 

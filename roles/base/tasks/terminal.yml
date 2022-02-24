@@ -1,0 +1,16 @@
+---
+- name: Uninstall xfce4-terminal
+  become: yes
+  pacman:
+    name:
+      - xfce4-terminal
+    state: absent
+
+# Choose terminator over xfce4-terminal
+- name: Install Terminator
+  become: yes
+  pacman:
+    name:
+      - terminator
+      - tmux
+    state: present
