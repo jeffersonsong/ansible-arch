@@ -31,6 +31,7 @@
       - xfce4-panel
       - xfce4-session      
       - xfdesktop
+      - pcmanfm
       - thunar
       - tumbler  # Image preview
     state: present
