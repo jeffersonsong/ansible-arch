@@ -19,6 +19,16 @@ reboot, login as user
 
 `# ansible-playbook brew.yml`
 
+Error starting domain: Requested operation is not valid: network 'vagrant-libvirt' is not active
+https://www.xmodulo.com/network-default-is-not-active.html
+
+sudo virsh net-list --all
+sudo virsh net-start vagrant-libvirt
+sudo virsh net-autostart vagrant-libvirt
+
+
+virsh net-autostart default
+virsh net-start default
 
 gnome installation
 https://gist.github.com/thacoon/96e66f5d475a059cc6d66b61c6366b7a
