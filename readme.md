@@ -30,17 +30,26 @@ sudo virsh net-autostart vagrant-libvirt
 virsh net-autostart default
 virsh net-start default
 
-gnome installation
+Minimal gnome installation to enable Google Drive
+
+pacman -S gnome-shell
+gnome-control-center
+gvfs-google
+
+xdg-user-dirs already installed by XFCE
+reuse lightdm no need to install gdm
+
 https://gist.github.com/thacoon/96e66f5d475a059cc6d66b61c6366b7a
 # Minimal gnome installation
 pacman -S gnome-shell gnome-terminal gnome-tweak-tool gnome-control-center xdg-user-dirs gdm
 
- sudo pacman -S manjaro-gnome-assets manjaro-gdm-theme
+sudo pacman -S manjaro-gnome-assets manjaro-gdm-theme
 
 gnome-shell
+gnome-control-center
 gnome-terminal
 gnome-tweak-tool
-gnome-control-center
+
 xdg-user-dirs
 gdm
 gnome-keyring
@@ -48,6 +57,6 @@ gnome-keyring
 gdm, gnome-control-center, gnome-tweaks, gnome-terminal and nautilus xdg-user-dirs eog file-roller
 
 # If you want to use a graphical user login
-pacman -S gdm3
+pacman -S gdm
 systemctl start gdm
 systemctl enable gdm # If everything works fine, to use gdm automatically

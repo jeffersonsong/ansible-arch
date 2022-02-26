@@ -41,5 +41,8 @@
 - name: Install fonts
   import_tasks: fonts.yml
 
+- name: Install minimal Gnome to enable Google Drive
+  import_tasks: mini-gnome.yml
+
 - name: Install productivity
   import_tasks: productivity.yml

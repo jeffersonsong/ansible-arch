@@ -1,0 +1,8 @@
+---
+- name: Install minimal gnome packages
+  become: yes
+  pacman:
+    name:
+      - gnome-shell
+      - gnome-control-center
+      - gvfs-google
