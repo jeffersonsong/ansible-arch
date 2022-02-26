@@ -3,9 +3,8 @@
   connection: local
   roles:
     - install
-  vars_prompt:
-    - name: username
-      prompt: Enter your username
-      private: false
+    - base
+    - dev
   vars:
+    - username: jeffersons
     - timezone: America/New_York
