@@ -1,0 +1,12 @@
+sane
+simple-scan
+gscan2pdf, pdftk
+#skanlite, doesn't support multipage scan
+#xsane, doesn't support multipage scan
+
+brightness: 25
+contrast: 25
+dpi: 300
+color
+
+masterpdfeditor-free

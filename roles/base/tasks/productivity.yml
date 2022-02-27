@@ -11,16 +11,26 @@
       - keepassxc
     state: present
 
+- name: Install scanner
+  become: yes
+  pacman:
+    name:
+      - sane
+      - gscan2pdf
+      - pdftk
+      - simple-scan
+
 - name: Install pdf reader
   become: yes
   pacman:
     name:
       - okular
 
-#- name: Install PDF
-#  flatpak:
-#    name:
-#      - master-pdf-editor
+- name: Install Master PDF
+  aur:
+    use: yay
+    name:
+      - masterpdfeditor-free
 
 - name: Install ISO burner
   aur:

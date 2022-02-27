@@ -1,0 +1,24 @@
+lpinfo --include-schemes dnssd -v
+network dnssd://HP%20LaserJet%20M102w%20(87F92C)._ipp._tcp.local/?uuid=564e4233-3835-3138-3538-5cbaef87f92c
+
+driverless:ipps://HP%20LaserJet%20M102w%20(87F92C)._ipps._tcp.local/ HP LaserJet M101-M106, driverless, cups-filters 1.28.11
+
+➜  ~ lpinfo -v
+direct hp
+network ipp
+network lpd
+network https
+network beh
+file cups-brf:/
+file cups-pdf:/
+network http
+network ipps
+network socket
+network smb
+direct hpfax
+network dnssd://HP%20LaserJet%20M102w%20(87F92C)._ipp._tcp.local/?uuid=564e4233-3835-3138-3538-5cbaef87f92c
+network ipps://HP%20LaserJet%20M102w%20(87F92C)._ipps._tcp.local/
+
+lpadmin -p M102w -v ipps://192.168.1.237/ipp
+
+dnssd://192.168.1.237/?uuid=564e4233-3835-3138-3538-5cbaef87f92c
