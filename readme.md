@@ -60,3 +60,8 @@ gdm, gnome-control-center, gnome-tweaks, gnome-terminal and nautilus xdg-user-di
 pacman -S gdm
 systemctl start gdm
 systemctl enable gdm # If everything works fine, to use gdm automatically
+
+
+printer
+manjaro-printer
+hp-setup 192.168.1.237
