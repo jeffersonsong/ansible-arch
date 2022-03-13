@@ -4,7 +4,7 @@
   pacman:
     name:
       - firefox
-    state: absent
+    state: present
 
 - name: Install Google Chrome
   aur:
